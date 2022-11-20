@@ -31,7 +31,7 @@ public class ProductController {
     @Autowired
     ProductRepository pRepository;
 
-    @RequestMapping(path = "create")
+    @RequestMapping(path = "/")
     public @ResponseBody String createProduct(@RequestParam String name, @RequestParam String  description, @RequestParam String price){
         Product  p = new Product();
 
@@ -46,7 +46,7 @@ public class ProductController {
 
 
 
-    @GetMapping("/all")
+    @GetMapping("/")
     public @ResponseBody Iterable<Product> getAllUsers(){
         return pRepository.findAll();
     }
