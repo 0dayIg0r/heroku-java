@@ -46,7 +46,7 @@ public class ProductController {
 
 
 
-    @GetMapping("/")
+    @GetMapping(path = "/")
     public @ResponseBody Iterable<Product> getAllUsers(){
         return pRepository.findAll();
     }
